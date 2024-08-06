@@ -1,0 +1,244 @@
+body {
+    --bg-color-light: rgb(240, 240, 240);
+    --bg-color-dark: rgb(25, 25, 25);
+    --button-bg-light: rgb(220, 220, 220);
+    --button-bg-dark: rgb(75, 75, 75);
+    --button-hover-light: rgb(0, 200, 0);
+    --button-hover-dark: rgb(0, 255, 162);
+
+    background-color: var(--bg-color-dark);
+    font-family: Roboto, Arial;
+    color: white;
+    margin: 0;
+}
+
+@media (prefers-color-scheme: light) {
+    body {
+        background-color: var(--bg-color-light);
+        color: black;
+    }
+
+    .container {
+        background-color: rgb(175, 175, 175);
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+    }
+
+    .location {
+        color: rgb(0, 220, 0);
+        text-shadow: 0 0 6px rgba(0, 0, 0, .75);
+    }
+
+    .button-container button {
+        background-color: var(--button-bg-light);
+        color: black;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .button-container button:hover {
+        background-color: var(--button-hover-light);
+        color: white;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: var(--bg-color-dark);
+        color: white;
+    }
+
+    .container {
+        background-color: rgb(50, 50, 50);
+    }
+
+    .container:hover {
+        box-shadow: 0 0 100px rgba(255, 255, 255, 0.5);
+        transition: box-shadow 0.3s;
+    }
+
+    .location {
+        color: rgb(0, 255, 162);
+    }
+
+    .button-container button {
+        background-color: var(--button-bg-dark);
+        color: white;
+    }
+
+    .button-container button:hover {
+        background-color: var(--button-hover-dark);
+        color: black;
+        box-shadow: 0 0 50px rgba(255, 255, 255, 0.5);
+        transition: box-shadow 0.1s;
+    }
+}
+
+@media (max-width: 960px),
+(max-height: 540px) {
+    .container {
+        padding: 20px;
+        border: none;
+        border-radius: 10px;
+        width: 250px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .pfp {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        margin-bottom: 10px;
+        margin-top: 5px;
+    }
+
+    .pfp .bubble {
+        position: absolute;
+        background-color: rgb(255, 255, 255);
+        color: black;
+        padding: 4px;
+        border-radius: 20px;
+        right: -120px;
+        bottom: 10px;
+        pointer-events: none;
+        white-space: nowrap;
+        opacity: 0;
+        transition: opacity 0.2s;
+    }
+
+    .pfp:hover .bubble {
+        opacity: 1;
+    }
+
+
+    .avatar {
+        width: 70px;
+        border-radius: 50%;
+        margin: 10px;
+        cursor: pointer;
+    }
+
+    .name {
+        font-weight: 500;
+        font-size: 20px;
+        margin-bottom: 6px;
+    }
+
+    .location {
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+    .button-container {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .button-container button {
+        width: 220px;
+        margin-bottom: 6px;
+        padding: 8px;
+        cursor: pointer;
+        border: none;
+        border-radius: 6px;
+        font-weight: 600;
+        font-size: 12px;
+        transition: background-color 0.1s, color 0.1s;
+    }
+}
+
+@media (min-width: 961px),
+(min-height: 541px) {
+    .container {
+        padding: 30px;
+        border: none;
+        border-radius: 10px;
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .pfp {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+
+    .pfp .bubble {
+        position: absolute;
+        background-color: rgb(255, 255, 255);
+        color: black;
+        padding: 4px;
+        border-radius: 20px;
+        right: -120px;
+        bottom: 10px;
+        pointer-events: none;
+        white-space: nowrap;
+        opacity: 0;
+        transition: opacity 0.2s;
+    }
+
+    .pfp:hover .bubble {
+        opacity: 1;
+    }
+
+    .avatar {
+        width: 70px;
+        border-radius: 50%;
+        margin: 10px;
+        cursor: pointer;
+    }
+
+    .name {
+        font-weight: 500;
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .location {
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    .button-container {
+        display: flex;
+        flex-direction: column;
+        margin-top: 30px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .button-container button {
+        width: 270px;
+        margin-bottom: 10px;
+        padding: 12px;
+        cursor: pointer;
+        border: none;
+        border-radius: 6px;
+        font-weight: 600;
+        font-size: 14px;
+        transition: background-color 0.1s, color 0.1s;
+    }
+}
