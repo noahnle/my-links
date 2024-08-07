@@ -8,17 +8,14 @@ A static web page providing all my online profiles in one place. This project us
 
    ```bash
    git clone https://github.com/noahnle/noah-links.git
-   ```
-
-2. **Navigate to the Project Directory**
-
-   ```bash
    cd noah-links
    ```
 
-3. **Open the Project**
+2. **Launch**
 
-   Open `index.html` in your browser or preferred code editor.
+   ```bash
+   open index.html
+   ```
 
 ## 📝 License
 
