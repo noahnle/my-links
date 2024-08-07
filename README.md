@@ -19,4 +19,4 @@ a static web page with all of my online profiles in one place
 
 ## 📝 license
 
-this project is licensed under the MIT License - see the LICENSE file for details
+this project is licensed under the MIT License - see the [LICENSE](https://github.com/noahnle/noah-links/blob/main/LICENSE) file for details
